@@ -1,5 +1,4 @@
-$scope.books = [
-		{title: 'Ragnarok', price: 200},
-		{title: 'Maple', price: 300},
-		{title: 'Yulgang', price: 400}
-	];
+$scope.books = [];
+$http.get('/api/book').success(function(data){
+	$scope.books=data;
+})
